@@ -6,53 +6,58 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Mikazuki Haymarket – Cash Control</h1>
 
-  <div class="section">
-    <h2>Cash Count (정산)</h2>
+<h1>Mikazuki Haymarket – Cash Control</h1>
 
-    <label>Cashier:
-      <select id="cashier">
-        <option>Anna</option>
-        <option>John</option>
-        <option>Mike</option>
-        <option>Lisa</option>
-      </select>
-    </label>
+<div class="section">
+  <h2>Cash Count (정산)</h2>
 
-    <div id="cash-inputs"></div>
+  Cashier:
+  <select id="cashier">
+    <option>Anna</option>
+    <option>John</option>
+    <option>Mike</option>
+    <option>Lisa</option>
+  </select>
 
-    <button onclick="calculateCash()">Calculate</button>
-    <h3 id="cash-result"></h3>
-    <button onclick="finalizeDay()">Finalize & Save Day</button>
-<h3 id="final-message"></h3>
+  <div id="cash-inputs"></div>
+  <button onclick="calculateCash()">Calculate</button>
+  <button onclick="finalizeDay()">Finalize & Save Day</button>
 
-  </div>
+  <h3 id="cash-result"></h3>
+  <h3 id="final-message"></h3>
+</div>
 
-  <div class="section">
-    <h2>Booking Deposit Ledger</h2>
+<div class="section">
+  <h2>SAFE Status</h2>
+  <div id="safeStatus"></div>
+</div>
 
-    <input placeholder="Name" id="depName" />
-    <input type="date" id="depDate" />
-    <input placeholder="Pax" id="depPax" />
-    <input placeholder="Amount" id="depAmount" />
-    <button onclick="addDeposit()">Add Deposit</button>
+<div class="section">
+  <h2>Booking Deposit Ledger</h2>
 
-    <div id="depositList"></div>
-  </div>
+  <input placeholder="Name" id="depName" />
+  <input type="date" id="depDate" />
+  <input placeholder="Pax" id="depPax" />
+  <input placeholder="Amount" id="depAmount" />
+  <input placeholder="Memo" id="depMemo" />
+  <button onclick="addDeposit()">Add Deposit</button>
 
-  <div class="section">
-    <h2>Refund / Cancel Log</h2>
+  <div id="depositList"></div>
+</div>
 
-    <input type="date" id="refDate" />
-    <input placeholder="Table/Order" id="refOrder" />
-    <input placeholder="Amount" id="refAmount" />
-    <input placeholder="Reason" id="refReason" />
-    <button onclick="addRefund()">Add Log</button>
+<div class="section">
+  <h2>Refund / Cancel Log</h2>
 
-    <div id="refundList"></div>
-  </div>
+  <input type="date" id="refDate" />
+  <input placeholder="Table/Order" id="refOrder" />
+  <input placeholder="Amount" id="refAmount" />
+  <input placeholder="Reason" id="refReason" />
+  <button onclick="addRefund()">Add Log</button>
 
-  <script src="app.js"></script>
+  <div id="refundList"></div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
